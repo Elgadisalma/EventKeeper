@@ -29,7 +29,7 @@ public class TestEventService {
 	        
 	        System.out.println("Liste des événements :");
 	        for (Event event : evenementService.getTousLesEvenements()) {
-	            System.out.println(event.getTitre() + " à " + event.getLieu() + " le " + event.getDateDebut() + event.getDateFin());
+	            System.out.println(event.getTitre() + " à " + event.getLieu() + " le " + event.getDateDebut());
 	        }
 
 	        
@@ -41,22 +41,21 @@ public class TestEventService {
 	        System.out.println(evenementService.getTousLesEvenements().get(0).getTitre());
 	        
 	        
-	        System.out.println("\n Evenement contenant 'Atelier' :");
-	        List<Event> rechercheResultats = evenementService.rechercherEvenements("Spring");
+	        System.out.println("\nÉvénements contenant 'Atelier' :");
+	        List<Event> rechercheResultats = evenementService.rechercherEvenements("Atelier");
 	        for (Event event : rechercheResultats) {
-	            System.out.println(event.getTitre() + "à" + event.getLieu() + "le" + event.getDateDebut());
+	            System.out.println(event.getTitre() + " à " + event.getLieu() + " le " + event.getDateDebut());
 	        }
 
-	        /*
-
+	        
 	        evenementService.supprimerEvenement(2);
 
 	        
 	        System.out.println("\nListe des événements après suppression :");
 	        for (Event event : evenementService.getTousLesEvenements()) {
-	            System.out.println(event.getTitre() + " à " + event.getLieu() + " le " + event.getDate());
+	            System.out.println(event.getTitre() + " à " + event.getLieu() + 
+	                " du " + event.getDateDebut() + " au " + event.getDateFin());
 	        }
-	        */
 	        
 	}
 
