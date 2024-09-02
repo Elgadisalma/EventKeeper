@@ -4,13 +4,13 @@ import java.util.Date;
 
 public class Event {
     private String titre;
-    private Date dateDebut;
-    private Date dateFin;
+    private String dateDebut;
+    private String dateFin;
     private String lieu;
     private String type;
 
 
-    public Event(String titre, Date dateDebut, Date dateFin,String lieu, String type) {
+    public Event(String titre, String dateDebut, String dateFin,String lieu, String type) {
         this.titre = titre;
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
@@ -27,19 +27,19 @@ public class Event {
         this.titre = titre;
     }
 
-    public Date getDateDebut() {
+    public String getDateDebut() {
         return dateDebut;
     }
 
-    public void setDateDebut(Date dateDebut) {
+    public void setDateDebut(String dateDebut) {
         this.dateDebut = dateDebut;
     }
     
-    public Date getDateFin() {
+    public String getDateFin() {
         return dateFin;
     }
 
-    public void setDateFin(Date dateFin) {
+    public void setDateFin(String dateFin) {
         this.dateFin = dateFin;
     }
 
