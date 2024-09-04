@@ -11,6 +11,8 @@ import java.util.List;
 			void modifierUtilisateur(int index, Utilisateur utilisateur);
 
 			void supprimerUtilisateur(int index);
+			
+			void register(Utilisateur utilisateur);
 
 			List<Utilisateur> getTousLesUtilisateurs();
 

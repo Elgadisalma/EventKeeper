@@ -5,13 +5,15 @@ import Services.UtilisateurService;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class UtilisateurServiceImpl implements UtilisateurService {
+    
     private List<Utilisateur> utilisateurs = new ArrayList<>();
 
     @Override
     public void ajouterUtilisateur(Utilisateur utilisateur) 
     {
-        utilisateurs.add(utilisateur);
+        utilisateurs.add(utilisateur); 
     }
 
     @Override
@@ -19,9 +21,9 @@ public class UtilisateurServiceImpl implements UtilisateurService {
     {
         if (index >= 0 && index < utilisateurs.size()) 
         {
-            utilisateurs.set(index, utilisateur);
+            utilisateurs.set(index, utilisateur); 
         } else {
-            System.out.println("not found");
+            System.out.println("Utilisateur non trouvé");
         }
     }
 
@@ -30,9 +32,9 @@ public class UtilisateurServiceImpl implements UtilisateurService {
     {
         if (index >= 0 && index < utilisateurs.size()) 
         {
-            utilisateurs.remove(index);
+            utilisateurs.remove(index); 
         } else {
-            System.out.println("not found");
+            System.out.println("Utilisateur non trouvé");
         }
     }
 
@@ -42,4 +44,9 @@ public class UtilisateurServiceImpl implements UtilisateurService {
         return utilisateurs;
     }
 
+    @Override
+    public void Register(Utilisateur utilisateur){
+        utilisateurs.add(utilisateur);
+    }
+    
 }
